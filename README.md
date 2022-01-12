@@ -10,7 +10,7 @@ $ pip3 install pyveasy
 
 ## Requeriments 
 
-Add content on ~/.zshrc or ~/.bashrc
+Add content on ~/.zshrc or ~/.bash_profile
 
 ```python
 # PYTHON
