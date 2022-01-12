@@ -2,34 +2,24 @@
 
 Create adjust project Python on VSCode
 
+## Install library
+
 ```
-$ pyveasy
+$ pip3 install pyveasy
 ```
+
+## Requeriments 
+
+Add content on ~/.zshrc or ~/.bashrc
 
 ```python
+# PYTHON
+export PYTHON3_HOME=~/Library/Python/3.8/
+export PATH=$PATH:$PYTHON3_HOME/bin
+```
 
-from setuptools import setup, find_packages
+Execute command and follow step-by-step
 
-
-def read_requirements():
-    with open("src/requirements.txt") as req:
-        content = req.read()
-        requirements = content.split("\n")
-    return requirements
-
-
-setup(
-    name="pyveasy",
-    version="1.2.0",
-    author="Anderson Braz de Sousa",
-    author_email="contato@andersonbraz.com",
-    packages=find_packages(),
-    include_package_data=True,
-    install_requires=read_requirements(),
-    entry_points="""
-        [console_scripts]
-        pyveasy=src.main:main
-    """,
-)
-
+```
+$ pyveasy
 ```
