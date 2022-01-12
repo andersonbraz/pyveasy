@@ -2,26 +2,11 @@ import click
 import os
 import json
 
-__version__ = "1.2.1"
+__version__ = "1.3.0"
 __author__ = "Anderson Braz de Sousa"
 __credits__ = "Open Community"
 
-
-@click.command()
-@click.option(
-    "--project",
-    prompt="Nome do Projeto",
-    default="python-project",
-    help="Project Name Python.",
-)
-def main(project):
-    if os.path.isdir(project):
-        click.echo(f"Projeto [{project}] já existe.")
-    else:
-        create_folder(project)
-        create_vscode(project)
-        click.echo(f"Criando projeto... [{project}]")
-        start_project(project)
+# VSCode
 
 
 def create_vscode(source):
@@ -57,12 +42,6 @@ def set_extensions(path):
     pass
 
 
-def create_folder(folder):
-    access_rights = 0o755
-    os.mkdir(folder, access_rights)
-    pass
-
-
 def fetch_settings():
     settings = '{"python.pythonPath":".venv/bin/python","code-runner.executorMap":{"python":".venv/bin/python"},"code-runner.ignoreSelection":true,"code-runner.runInTerminal":true,"python.linting.enabled":true,"python.linting.mypyEnabled":false,"python.linting.flake8Enabled":true,"[python]":{"editor.formatOnSave":true,"editor.codeActionsOnSave":{"python.sortImports":true}},"python.testing.unittestEnabled":false,"python.testing.pytestEnabled":true,"python.testing.pytestPath":".venv/bin/pytest","python.formatting.provider":"black"}'
     return settings
@@ -71,6 +50,67 @@ def fetch_settings():
 def fetch_extensions():
     extensions = '{"recommendations":["formulahendry.code-runner","dracula-theme.theme-dracula","eamodio.gitlens","vscode-icons-team.vscode-icons","ms-python.python","ms-vscode.notepadplusplus-keybindings"]}'
     return extensions
+
+
+# Source
+
+
+def create_source(source):
+    path = source + "/" + "src/"
+    create_folder(path)
+    configure_source(path)
+    pass
+
+
+def configure_source(path):
+    set_init(path)
+    set_main(path)
+    pass
+
+
+def set_init(path):
+    content = ""
+    file_init = path + "__init__.py"
+    code_init = open(file_init, "w")
+    code_init.write(content)
+    code_init.close()
+    pass
+
+
+def set_main(path):
+    content = ""
+    file_main = path + "main.py"
+    code_main = open(file_main, "w")
+    code_main.write(content)
+    code_main.close()
+    pass
+
+
+# Generics
+
+
+@click.command()
+@click.option(
+    "--project",
+    prompt="Nome do Projeto",
+    default="python-project",
+    help="Project Name Python.",
+)
+def main(project):
+    if os.path.isdir(project):
+        click.echo(f"Projeto [{project}] já existe.")
+    else:
+        create_folder(project)
+        create_vscode(project)
+        create_source(project)
+        click.echo(f"Criando projeto... [{project}]")
+        start_project(project)
+
+
+def create_folder(folder):
+    access_rights = 0o755
+    os.mkdir(folder, access_rights)
+    pass
 
 
 def start_project(path):
