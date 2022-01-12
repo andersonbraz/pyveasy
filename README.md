@@ -1,6 +1,6 @@
 # Python VSCode Easy
 
-Create adjust project Python on VSCode
+Library create a Python project tuned for VSCode.
 
 ## Install library
 
