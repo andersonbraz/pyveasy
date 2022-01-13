@@ -78,7 +78,7 @@ def set_init(path):
 
 
 def set_main(path):
-    content = ""
+    content = 'def main():\n    print("Hello World!")\n\n\nif __name__ == "__main__":\n    main()\n'
     file_main = path + "main.py"
     code_main = open(file_main, "w")
     code_main.write(content)
