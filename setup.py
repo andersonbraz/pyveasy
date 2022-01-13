@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="pyveasy",
-    version="1.3.0",
+    version="1.3.1",
     author="Anderson Braz de Sousa",
     author_email="contato@andersonbraz.com",
     url="https://pypi.org/project/pyveasy/",
