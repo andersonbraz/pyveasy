@@ -12,7 +12,6 @@ setup(
     description="Library create a Python project tuned for VSCode.",
     long_description = long_description,
     long_description_content_type="text/markdown",
-    package_dir={"": "src"},
     packages=find_packages(include=["src", "src.*"]),
     include_package_data=True,
     install_requires=["click==8.0.3"],
