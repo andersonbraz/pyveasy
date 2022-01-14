@@ -10,7 +10,7 @@ setup(
     author_email="contato@andersonbraz.com",
     url="https://pypi.org/project/pyveasy/",
     description="Library create a Python project tuned for VSCode.",
-    long_description = long_description,
+    long_description=long_description,
     long_description_content_type="text/markdown",
     packages=find_packages(include=["src", "src.*"]),
     include_package_data=True,
@@ -19,7 +19,6 @@ setup(
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
-        "Operating System :: OS MacOS",
     ],
     python_requires=">=3.6",
 )
