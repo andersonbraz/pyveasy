@@ -5,11 +5,11 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="pyveasy",
-    version="1.4.0",
+    version="1.5.0",
     author="Anderson Braz de Sousa",
     author_email="contato@andersonbraz.com",
     url="https://pypi.org/project/pyveasy/",
-    description="Library create a Python project tuned for VSCode.",
+    description="PyEasy is a project generator for bootstrapping basic Python to VSCode.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=find_packages(include=["src", "src.*"]),

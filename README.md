@@ -1,6 +1,5 @@
-# Project description
 
-PyEasy is a project generator for bootstrapping basic Python on VSCode, ready to be shared on PyPI and installable via pip. It is easy to use and encourages the adoption of the best tools and practices of the Python ecosystem, helping you and your team to stay sane, happy and productive.
+PyEasy is a project generator for bootstrapping basic Python to VSCode, ready to be shared on PyPI and installable via pip. It is easy to use and encourages the adoption of the best tools and practices of the Python ecosystem, helping you and your team to stay sane, happy and productive.
 
 ## Installing
 
