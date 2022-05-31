@@ -11,9 +11,10 @@ __credits__ = "Open Community"
 
 def create_vscode(source):
     path = source + "/" + ".vscode/"
-    create_folder(path)
-    configure_vscode(path)
-    pass
+    if os.path.isdir(path) is not True:
+        create_folder(path)
+        configure_vscode(path)
+        pass
 
 
 def configure_vscode(path):
