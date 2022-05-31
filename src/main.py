@@ -97,8 +97,13 @@ def set_main(path):
     help="Project Name Python.",
 )
 def main(project):
-    if os.path.isdir(project):
+    if project == ".":
+        create_vscode(project)
+        click.echo(f"Configurando .vscode do projeto... [{project}]")
+    elif os.path.isdir(project):
         click.echo(f"Projeto [{project}] já existe.")
+        create_vscode(project)
+        click.echo(f"Configurando .vscode do projeto... [{project}]")
     else:
         create_folder(project)
         create_vscode(project)
