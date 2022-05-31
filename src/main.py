@@ -1,6 +1,7 @@
-import click
-import os
 import json
+import os
+
+import click
 
 __version__ = "1.5.0"
 __author__ = "Anderson Braz de Sousa"
@@ -10,6 +11,14 @@ __credits__ = "Open Community"
 
 
 def create_vscode(source):
+    """_summary_
+
+    Args:
+        source (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
     path = source + "/" + ".vscode/"
     if os.path.isdir(path) is not True:
         create_folder(path)
@@ -49,11 +58,8 @@ def fetch_settings():
 
 
 def fetch_extensions():
-    extensions = '{"recommendations":["formulahendry.code-runner","dracula-theme.theme-dracula","eamodio.gitlens","vscode-icons-team.vscode-icons","ms-python.python","ms-vscode.notepadplusplus-keybindings"]}'
+    extensions = '{"recommendations":["njpwerner.autodocstring","vtenentes.bdd","formulahendry.code-runner","dracula-theme.theme-dracula","vscode-icons-team.vscode-icons","ms-python.python","ms-vscode.notepadplusplus-keybindings"]}'
     return extensions
-
-
-# Source
 
 
 def create_source(source):
