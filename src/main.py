@@ -44,7 +44,7 @@ def set_extensions(path):
 
 
 def fetch_settings():
-    settings = '{"python.pythonPath":".venv/bin/python","code-runner.executorMap":{"python":".venv/bin/python"},"code-runner.ignoreSelection":true,"code-runner.runInTerminal":true,"python.linting.enabled":true,"python.linting.mypyEnabled":false,"python.linting.flake8Enabled":true,"[python]":{"editor.formatOnSave":true,"editor.codeActionsOnSave":{"python.sortImports":true}},"python.testing.unittestEnabled":false,"python.testing.pytestEnabled":true,"python.testing.pytestPath":".venv/bin/pytest","python.formatting.provider":"black"}'
+    settings = '{"python.terminal.activateEnvironment": true,"python.defaultInterpreterPath":".venv/bin/python","code-runner.executorMap":{"python":".venv/bin/python"},"code-runner.ignoreSelection":true,"code-runner.runInTerminal":true,"python.linting.enabled":true,"python.linting.mypyEnabled":false,"python.linting.flake8Enabled":true,"[python]":{"editor.formatOnSave":true,"editor.codeActionsOnSave":{"python.sortImports":true}},"python.testing.unittestEnabled":false,"python.testing.pytestEnabled":true,"python.testing.pytestPath":".venv/bin/pytest","python.formatting.provider":"black"}'
     return settings
 
 
